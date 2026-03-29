@@ -18,15 +18,13 @@ public class Mage extends Character {
     // toString
     @Override
     public String toString() {
-        return "Mage{" +
-                "level=" + level +
-                ", defense=" + defense +
-                ", attack=" + attack +
-                ", health=" + health +
-                ", name='" + name + '\'' +
-                ", mana=" + mana +
-                ", magicType='" + magicType + '\'' +
-                '}';
+        return "Mago - " + "Nome: " + name +
+                " - Level: " + level +
+                " - Defesa: " + defense +
+                " - Ataque: " + attack +
+                " - Vida: " + health +
+                " - Tipo de Magia: " + magicType +
+                " - Mana: " + mana;
     }
 
 
@@ -37,7 +35,7 @@ public class Mage extends Character {
         if (mana >= 10) {
             mana -= 10;
             int damage = attack + 10;
-            System.out.println(name + " ataca o inimigo com magia de " + magicType + damage + ". Mana restante: " + mana);
+            System.out.println(name + " ataca o inimigo com magia de " + magicType + ". Dano: " + damage + ". Mana restante: " + mana);
         } else {
             System.out.println(name + " tenta atacar com magia mas não tem mana suficiente!");
         }

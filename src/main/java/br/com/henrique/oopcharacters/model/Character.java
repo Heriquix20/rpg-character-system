@@ -9,6 +9,7 @@ public abstract class Character {
     protected int level;
 
 
+
     // Construtor
     public Character(String name, int health, int attack, int defense, int level) {
         this.name = name;
@@ -17,6 +18,8 @@ public abstract class Character {
         this.defense = defense;
         this.level = level;
     }
+
+
 
     // ToString
     @Override
@@ -29,6 +32,8 @@ public abstract class Character {
                 ", level=" + level +
                 '}';
     }
+
+
 
     // Métodos Principais (Ataque, Defesa, Dar dano e Curar)
     public void attack() {
@@ -44,12 +49,14 @@ public abstract class Character {
             finalDamage = 0;
         }
         health -= finalDamage;
-        System.out.println(name + " took " + finalDamage + " damage!");
+        System.out.println(name + " tomou " + finalDamage + " de dano!");
     }
     public void heal(int amount) {
         health += amount;
-        System.out.println(name + " healed " + amount + " HP!");
+        System.out.println(name + " curou " + amount + " de HP!");
     }
+
+
 
     // Gets e Sets
     public int getLevel() {

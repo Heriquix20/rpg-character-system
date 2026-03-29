@@ -19,15 +19,13 @@ public class Warrior extends Character {
     // to String
     @Override
     public String toString() {
-        return "Warrior{" +
-                "level=" + level +
-                ", defense=" + defense +
-                ", attack=" + attack +
-                ", health=" + health +
-                ", name='" + name + '\'' +
-                ", armor=" + armor +
-                ", weapon='" + weapon + '\'' +
-                '}';
+        return "Cavaleiro - " + "Nome: " + name +
+                " - Level: " + level +
+                " - Defesa: " + defense +
+                " - Ataque: " + attack +
+                " - Vida: " + health +
+                " - Armadura: " + armor +
+                " - Armamento: " + weapon;
     }
 
 
@@ -35,18 +33,21 @@ public class Warrior extends Character {
     // Métodos
     public void heavyStrike() {
         int damage = attack * 2;
-        System.out.println(name + " realiza um Heavy Strike com " + weapon + "! Dano: " + damage);
+        int totalDefense = defense + armor;
+        System.out.println(name + " realiza um Heavy Strike com " + weapon + "! Dano: " + damage + ". Defesa atual: " + totalDefense);
     }
 
     @Override
     public void attack() {
-        System.out.println(name + " ataca o adversário com " + weapon + "!");
+        int damage = attack; // ataque normal simples
+        int totalDefense = defense + armor;
+        System.out.println(name + " ataca o adversário com " + weapon + "! Dano: " + damage + ". Defesa atual: " + totalDefense);
     }
 
     @Override
     public void defense() {
         int totalDefense = defense + armor;
-        System.out.println(name + " defende com armadura! Defesa Total de: " + totalDefense);
+        System.out.println(name + " defende com armadura! Defesa Total: " + totalDefense);
     }
 
 
