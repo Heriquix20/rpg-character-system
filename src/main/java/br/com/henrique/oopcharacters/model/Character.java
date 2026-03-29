@@ -1,6 +1,6 @@
 package br.com.henrique.oopcharacters.model;
 
-public class Character {
+public abstract class Character {
 
     protected String name;
     protected int health;
@@ -51,8 +51,6 @@ public class Character {
         System.out.println(name + " healed " + amount + " HP!");
     }
 
-
-
     // Gets e Sets
     public int getLevel() {
         return level;
@@ -88,5 +86,4 @@ public class Character {
     public void setName(String name) {
         this.name = name;
     }
-
 }
